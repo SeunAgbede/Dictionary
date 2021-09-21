@@ -1,5 +1,2 @@
-# Dictionary
+## Dictionary
 
-testing this commit
-
-hgjdai
