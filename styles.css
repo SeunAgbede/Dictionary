@@ -5,14 +5,22 @@
 }
 
 #searchBtn{
-    color: hotpink;
-    background: lightblue;
+    color: black;
+    background: gray;
     border-radius: 50%;
     padding: 9px;
     transition: 0.2s;
 }
 
-#search:hover{
+#searchBtn:hover{
     transform: scale(1.05);
     transition: 0.2s;
+}
+
+.sound{
+    visibility: hidden;
+}
+
+.sound_1{
+    visibility: visible;
 }

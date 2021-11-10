@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Dictionary</title>
 </head>
 
@@ -16,13 +15,19 @@
     <div>
 
         <input class="input is-rounded" type="text" id="word" placeholder="Enter Word">
-
         <a href="javascript:void(0);"><span class="material-icons" id="searchBtn">search</span></a>
-        <p class="word_1"></p>
-        <p class="phonetic"></p>
-        <p class="origin"></p>
-        <br>
-        <p class="definition"></p>
+
+        <div>
+            <p class="badWord"></p>
+            <p class="word_1" id="cls"></p>
+            <p class="phonetic" id="cls"></p>
+            <span class="material-icons sound">volume_up</span>
+            <p class="audio" id="cls"></p>
+            <p class="origin" id="cls"></p>
+            <br>
+            <p class="definition" id="cls"></p>
+            <p class="syn" id="cls"></p>    
+        </div>
 
     </div>
 
