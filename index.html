@@ -12,21 +12,32 @@
 </head>
 
 <body>
-    <div>
+    <div class="main">
 
-        <input class="input is-rounded" type="text" id="word" placeholder="Enter Word">
-        <a href="javascript:void(0);"><span class="material-icons" id="searchBtn">search</span></a>
+        <h1 class="is-size-1">&#128214; Dictionary</h1>
 
-        <div>
+        <div id="searchBar">
+            <input class="input is-rounded" type="text" id="word" placeholder="Enter Word">
+            <a href="javascript:void(0);"><span class="material-icons" id="searchBtn">search</span></a>
+        </div>
+
+
+        <div class="results">
+
             <p class="badWord"></p>
-            <p class="word_1" id="cls"></p>
-            <p class="phonetic" id="cls"></p>
-            <span class="material-icons sound">volume_up</span>
-            <p class="audio" id="cls"></p>
-            <p class="origin" id="cls"></p>
+
+            <div class="results_mainLine">
+                <p class="word_1 cls is-size-3"></p>
+                <p class="phonetic cls"></p>
+                <span class="material-icons sound">volume_up</span>
+            </div>
+
+            <p class="audio cls"></p>
+            <p class="origin cls"></p>
             <br>
-            <p class="definition" id="cls"></p>
-            <p class="syn" id="cls"></p>    
+            <p class="definition cls"></p>
+            <p class="syn_heading">Synonymns</p>
+            <p class="syn cls syn_style"></p>
         </div>
 
     </div>
