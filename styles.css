@@ -162,3 +162,16 @@ li {
   background-color: #000000;
   border-radius: 20px;
 }
+
+/* Media Query */
+@media (max-width: 580px){
+
+  #word {
+    width: 70%;
+  }
+
+  .results{
+    width: 70%;
+  }
+
+}
