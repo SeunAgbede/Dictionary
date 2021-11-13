@@ -7,6 +7,7 @@ const origin = document.querySelector('.origin');
 const word2 = document.querySelector('#word');
 const audio = document.querySelector('.audio');
 const syn = document.querySelector('.syn');
+const syn_heading = document.querySelector('.syn_heading');
 const badWord = document.querySelector('.badWord');
 
 
@@ -19,6 +20,7 @@ word2.addEventListener("keyup", function (e) {
 
 searchBtn.addEventListener('click', findWord)
 
+
 async function findWord() {
 
     const word = document.querySelector('.input').value; // collect word from user
@@ -27,11 +29,16 @@ async function findWord() {
     
     if (data.title == 'No Definitions Found') {  
         
-        badWord.innerHTML = `<p> Sorry, ${data.title} </p>`;
+        badWord.innerHTML = `<p> Sorry, no definitions found for ${word} &#128533;</p>`;
+
+        badWord.classList.add('wobble-hor-top');
         
         // clears the document of any existing entries
         sound.classList.remove('sound_1'); // removes the sound icon visibility
-        const cls = document.querySelectorAll("#cls");
+
+        syn_heading.classList.remove('syn_heading_1'); //removes the Synonymns heading
+
+        const cls = document.querySelectorAll(".cls");
         cls.forEach(function(e){
             e.innerHTML = '';
         });
@@ -39,6 +46,8 @@ async function findWord() {
     } else {
         // Clears error message
         document.querySelector('.badWord').innerHTML = '';
+        
+        badWord.classList.remove('wobble-hor-top');
 
         word_1.innerHTML = data[0].word;
         phonetic.innerHTML = `[ ${data[0].phonetic} ]`;
@@ -54,7 +63,7 @@ async function findWord() {
         });
 
         // Origin 
-        origin.innerHTML = data[0].origin;
+        origin.innerHTML = `<p> origin <br> ${data[0].origin} </p>`;
 
         // Definitions 
         document.querySelector('.definition').innerHTML = ''; // clears the document 
@@ -67,6 +76,8 @@ async function findWord() {
 
         // Synonyms 
         document.querySelector('.syn').innerHTML = ''; // clears the document
+        syn_heading.classList.add('syn_heading_1'); //adds Synonymn heading
+       
         let synNum = data[0].meanings[0].definitions[0].synonyms.slice(0, 7).length;
         for (let i = 0; i < synNum; i++) {
             syn.innerHTML += `<li>${data[0].meanings[0].definitions[0].synonyms[i]}</li>`;
