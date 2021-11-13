@@ -4,9 +4,9 @@
 
 Built this dictionary using the Free Dictionary API from https://github.com/meetDeveloper/freeDictionaryAPI
 
-**_Caveat_** : This is not an extensive dictionary hence it should not be treated as such.
+**_Caveat_** : This is not an extensive dictionary hence it should not be treated as such :upside_down_face:
 
-Styled with bulma + some custom CSS | Hosted on netlify
+Styled with BULMA + some custom CSS | Hosted on netlify
 
 ------
 
