@@ -43,6 +43,7 @@ async function findWord() {
         });
 
     } else {
+
         // Clears error message
         document.querySelector(".badWord").innerHTML = "";
 
@@ -76,7 +77,7 @@ async function findWord() {
         // Synonyms
         document.querySelector(".syn").innerHTML = ""; // clears the document
         syn_heading.classList.add("syn_heading_1"); //adds Synonymn heading
-        
+
         let synNum = data[0].meanings[0].definitions[0].synonyms.slice(0, 7).length; //capping the number of synonyms
         // loops through to display list of synonyms
         for (let i = 0; i < synNum; i++) {
@@ -85,14 +86,18 @@ async function findWord() {
             // Making the synonyms recursive 
             let synLists = document.querySelectorAll('.synLists');
 
-            synLists.forEach( function (e) {
+            synLists.forEach(function (e) {
 
                 e.addEventListener('click', function (event) {
                     // Converts synLists to an array and then outputs the index of clicked item to A 
-                    let A = Array.from(synLists).indexOf(event.target); 
+                    let A = Array.from(synLists).indexOf(event.target);
                     document.querySelector(".input").value = syn.innerText.split('\n')[A];
 
                     findWord();
+                    
+                    // Scroll back to the top
+                    window.scrollTo(0, 0);
+
                 });
             });
         };
