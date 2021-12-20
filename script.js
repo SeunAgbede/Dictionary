@@ -96,7 +96,7 @@ async function findWord() {
                     findWord();
                     
                     // Scroll back to the top
-                    window.scrollTo(0, 0);
+                    window.scrollTo({top: 0, behavior: 'smooth'});
 
                 });
             });
