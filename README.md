@@ -10,5 +10,5 @@ Styled with BULMA + some custom CSS | Hosted on netlify
 
 ------
 
-You can see the project live -> [HERE](https://dreamy-dubinsky-164af1.netlify.app/)
+You can see the project live -> [HERE](https://dictionary-euclid.netlify.app/)
 
