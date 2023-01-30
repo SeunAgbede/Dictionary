@@ -57,7 +57,7 @@ async function findWord() {
 
         // Play word
         sound.addEventListener("click", function () {
-            audio.innerHTML = `<audio id="myAudio"> <source src="${data[0].phonetics[0].audio}"> </audio>`;
+            audio.innerHTML = `<audio id="myAudio"> <source src="${data[0].phonetics[?(@.audio!=="")].audio}"> </audio>`;
             const myAudio = document.querySelector("#myAudio");
             myAudio.play();
         });
